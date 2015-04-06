@@ -1,0 +1,43 @@
+<html>
+	<head>
+	<title>TESTE CALCULADORA</title>
+		<meta "charset=utf-8">
+
+	</head>
+
+	<body>
+     <input type="text" id="operador1">
+     <input type="text" id="operador2">
+     <button onclick="calculo('+')">+</button>
+     <button onclick="calculo('-')">-</button>
+     <button onclick="calculo('*')">*</button>
+     <button onclick="calculo('/')">/</button>
+     <input type="text" id="resultado">
+
+	<script>
+	function calculo(operador){
+		var num1 = parseInt(document.querySelector('#operador1').value);
+		var num2 = parseInt(document.querySelector('#operador2').value);
+		
+		var result = 0; 
+		switch(operador)
+		{
+		case '+':
+		result = num1 + num2;
+		break;
+		case '-':
+		result = num1 - num2;
+		break;
+		case '*':
+		result = num1 * num2;	
+		break;
+		case '/':
+		result = num1 / num2;
+		break;
+	     }
+		document.querySelector('#resultado').value = result;
+		}
+	</script>	
+	</body>
+
+</html>
